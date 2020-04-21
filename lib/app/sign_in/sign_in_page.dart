@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:timetrackerapp/custom_widgets/custom_raised_button.dart';
 import 'package:timetrackerapp/custom_widgets/sign_in_custom_button.dart';
+import 'package:timetrackerapp/custom_widgets/social_sign_in_button.dart';
 
 class SignInPage extends StatelessWidget {
   @override
@@ -27,22 +29,27 @@ class SignInPage extends StatelessWidget {
               style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.w100),
             ),
             SizedBox(
-              height: 8.9,
+              height: 8.0,
             ),
-            SignInButton(
+            SocialSignInButton(
+              assetName: 'images/google-logo.png',
               text: 'Sign in with Google',
-              color: Colors.white,
               textColor: Colors.black87,
               onPressed: () {},
+              color: Colors.white,
             ),
 
             SizedBox(
               height: 8.0,
             ),
-            SignInButton(
-              text: 'Sign in with Facebook',
-              color: Color(0xFF334D92),
+            SizedBox(
+              height: 8.0,
+            ),
+            SocialSignInButton(
+              assetName: 'images/facebook-logo.png',
+              text: 'Sign in with Facbeook',
               textColor: Colors.white,
+              color: Color(0xFF334D92),
               onPressed: () {},
             ),
             SizedBox(
@@ -53,7 +60,24 @@ class SignInPage extends StatelessWidget {
               color: Colors.teal[700],
               textColor: Colors.white,
               onPressed: () {},
-            )
+            ),
+            SizedBox(
+              height: 8.0,
+            ),
+            Text(
+              'or',
+              style: TextStyle(
+                fontSize: 14.0,
+                color: Colors.black87,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SignInButton(
+              text: 'Go anonymous',
+              color: Colors.lime[300],
+              textColor: Colors.black,
+              onPressed: () {},
+            ),
           ]),
     );
   }
